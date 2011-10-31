@@ -1,20 +1,21 @@
 !!!WARNING!!!
-This script has not been tested extensively. It will not break anything,
-but it may make a bit of a mess.
+This script has not been tested extensively. It should not break anything,
+but it may make a bit of a mess. I have used it myself without grief.
 
 If it does not complete you will have a <taget>.tmp dir and/or a 
-<target>.dir. You can try debug for yourself or just delete the 2 dirs
-with rm -rf <dir>.
+<target>.git dir. You can try debug for yourself or just delete the 2 
+dirs with rm -rf <dir>.
 
 ABOUT git-svn-pure-cp
 ---------------------
-This is a simple script meant to make a copy of a git repository
+This is a simple script meant to make a clone of a git repository
 created with the git-svn suite to a fully functional ordinary git 
-repository in a subdir of PWD.
+bare repository in a subdir of PWD.
 
-This means, that you can make ordinary git clones from the copy. However,
-the pure git repo knows nothing of the original svn repo and will not be
-able to interoperate with it. Its a clean cut.
+Unlike in the case of a normal git-svn clone. This means, that you can
+make ordinary git clones from the copy. However, the pure git repo knows
+nothing of the original svn repo and will not be able to interoperate
+with it. Its a clean cut.
 
 The amount of the original svn history of the copy is entirely up to the 
 amount imported into the svn-git repo. All of the history of the svn-git
