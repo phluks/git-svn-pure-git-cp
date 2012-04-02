@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Git-svn-pure-git-cp by phluks</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/phluks/git-svn-pure-git-cp">Fork On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/phluks/git-svn-pure-git-cp/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/phluks/git-svn-pure-git-cp/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Git-svn-pure-git-cp</h1>
+          <p>Simple script for making pure git repo copy from a git-svn repo. Based on git-svn-migrate.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/phluks">phluks</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/mattgraham">mattgraham</a></span>
+        </div>
+
+        <h3>ABOUT git-svn-pure-cp</h3>
+
+<p>This is a simple script meant to make a clone of a git repository created with the git-svn suite to a fully functional ordinary git bare repository in a subdir of PWD.</p>
+
+<p>Unlike in the case of a normal git-svn clone. This means, that you can make ordinary git clones from the copy. However, the pure git repo knows nothing of the original svn repo and will not be able to interoperate with it. Its a clean cut.</p>
+
+<p>The amount of the original svn history of the copy is entirely up to the amount imported into the svn-git repo. All of the history of the svn-git repo should be imported (please review the script and the result).</p>
+
+<p>The script is essentially a subset of git-svn-migrate.</p>
+
+<h3>USAGE</h3>
+
+<pre><code>git-svn-pure-cp &lt;path-to-git-svn-repo&gt; &lt;name-of-copy&gt;
+</code></pre>
+
+<h3>USE CASE</h3>
+
+<p>For most ordinary exports of svn repos with standard layout, you would be much better off using a tool like <code>git-svn-migrate</code> by <a href="/JohnAlbin" class="user-mention">@JohnAlbin</a>.</p>
+
+<p>If you already have a git-svn repo, or you for some reason need to make your own svn-to-git export, git-svn-pure-git-cp enables you to "upgrade" your resulting svn export repo to a pure git repo.</p>
+
+<h3>REQUIREMENTS</h3>
+
+<p>Reasonably recent version of git (Im not quite sure which version). Shell invironment - like bash.</p>
+
+<p>The script makes an intermediary copy of the git-svn repo in PWD (present-working-directory). So you must have at least 2 times the diskspace of the original repo available. You must be able to read the original repos and be able to write to PWD.</p>
+
+<h3>RESSOURCES</h3>
+
+<h4>Programs:</h4>
+
+<ul>
+<li>git-svn-migrate: <a href="https://github.com/JohnAlbin/git-svn-migrate">https://github.com/JohnAlbin/git-svn-migrate</a></li>
+<li>git-svn-abandon: <a href="https://github.com/nothingmuch/git-svn-abandon">https://github.com/nothingmuch/git-svn-abandon</a></li>
+</ul><h4>Blogs:</h4>
+
+<ul>
+<li><a href="http://john.albin.net/git/convert-subversion-to-git">http://john.albin.net/git/convert-subversion-to-git</a></li>
+<li><a href="http://john.albin.net/git/git-svn-migrate">http://john.albin.net/git/git-svn-migrate</a></li>
+<li><a href="http://blog.woobling.org/2009/06/git-svn-abandon.html">http://blog.woobling.org/2009/06/git-svn-abandon.html</a></li>
+</ul><h3>LICENSE</h3>
+
+<p>GPL2 - Same as git-svn-migrate
+See LICENSE.txt.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  </body>
+</html>
